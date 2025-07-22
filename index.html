@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Blog</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Blogger</div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showPage('admin')">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <input type="text" id="search" placeholder="Search posts..." />
+      <div id="posts"></div>
+    </section>
+
+    <section id="about" class="page">
+      <h2>About</h2>
+      <p>We are a Blogging Website.</p>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <pre>
+        📞 Phone number : +91 987654321
+        📍 Address : SCO 123, Sector 20, Chandigarh
+        📧 Gmail : contact@gmail.com
+      </pre>
+    </section>
+
+    <section id="admin" class="page">
+      <h2>Admin Panel</h2>
+      <input type="text" id="titleInput" placeholder="Blog Title"/>
+      <textarea id="contentInput" placeholder="Blog Content"></textarea>
+      <button onclick="addPost()">Add Post</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
